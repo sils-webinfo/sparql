@@ -1,0 +1,6 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# list all types used
+SELECT DISTINCT ?type WHERE {
+
+}

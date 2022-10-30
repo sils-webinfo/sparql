@@ -1,0 +1,7 @@
+predicate,object
+http://n2t.net/ark:/39333/ncg/vocab#county,http://n2t.net/ark:/39333/ncg/place/NCG07740
+http://purl.org/dc/terms/type,http://n2t.net/ark:/39333/ncg/type#mountain
+http://www.w3.org/2000/01/rdf-schema#seeAlso,https://sws.geonames.org/4460693/
+http://www.w3.org/2004/02/skos/core#note,in E Jackson County on the head of Mull Creek.
+http://www.w3.org/2004/02/skos/core#prefLabel,Choggy Butte Mountain
+https://purl.org/geojson/vocab#geometry,"{""type"":""Point"",""coordinates"":[-83.02819,35.36149]}"

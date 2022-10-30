@@ -1,0 +1,4 @@
+# list all predicates used
+SELECT DISTINCT ?predicate WHERE {
+
+}

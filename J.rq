@@ -1,0 +1,10 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geojson: <https://purl.org/geojson/vocab#>
+PREFIX nct: <http://n2t.net/ark:/39333/ncg/type#>
+PREFIX ncv: <http://n2t.net/ark:/39333/ncg/vocab#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# creeks in Orange or Chatham county, with optional location
+SELECT ?uri ?name ?geometry ?county_name WHERE {
+
+}

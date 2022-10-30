@@ -1,0 +1,7 @@
+*-actual.*
+*.correct
+*.valid
+submission.zip
+tools/jena/*
+!tools/jena/Makefile
+answers
