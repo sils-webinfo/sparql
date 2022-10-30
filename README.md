@@ -1,14 +1,80 @@
 # SPARQL
 
-
+For this assignment you will write a series of SPARQL queries. You'll use an interactive SPARQL query interface to develop each query, and then copy and paste it into a file to check that it is correct.
 
 ## Instructions
 
-validate query
+The questions are lettered `A` through `R`. Later questions build upon earlier ones. In many cases you can answer a question by modifying the query for the previous question.
 
-run query and get results
+For each question there is a corresponding SPARQL query file with the suffix `.rq`, for example `A.rq`. The initial contents of each query file contain prefixes and the selected variable names to get you started. Use the contents as a starting point for developing and testing your query in the interactive SPARQL query interface.
 
-check if results are correct
+Once you have a query that you think works, copy and paste it into query file.
+
+To check if the query in `A.rq` is valid SPARQL, run:
+
+```
+make A.valid
+```
+
+If the query in `A.rq` is not valid SPARQL, you'll get an error.
+
+To run the query in `A.rq` and put the results in `A-actual.csv`, run:
+
+```
+make A-actual.csv
+```
+
+To check if results of the `A.rq` query are correct, run:
+
+```
+make A.correct
+```
+
+If the results are not correct, you'll see an error like 
+
+```diff
+--- A-actual.csv	2022-10-29 21:45:38.000000000 -0400
++++ A-expect.csv	2022-10-29 11:45:56.000000000 -0400
+@@ -1,2 +1,2 @@
+ uri
+-
++http://n2t.net/ark:/39333/ncg/place/NCG03092
+gmake: *** [Makefile:52: A.correct] Error 1
+```
+
+The green lines starting with `+` are the expected (correct) results. The red lines starting with `-` are the actual (incorrect) results.
+
+### Skipping questions
+
+If you want to skip a question, run:
+
+```
+make A.skipped
+```
+
+(Replace `A` with the letter of the question you wish to skip.)
+
+If you change your mind about skipping questions, run:
+
+```
+make clean
+```
+
+### Submitting the assignment
+
+To submit the assignment, run:
+
+```
+make submission.zip
+```
+
+Then submit the zip file at 
+https://aeshin.org/teaching/assignment/210/submit/
+
+Finally, you should [commit](https://docs.github.com/en/codespaces/developing-in-codespaces/using-source-control-in-your-codespace#committing-your-changes) and [push](https://docs.github.com/en/codespaces/developing-in-codespaces/using-source-control-in-your-codespace#pushing-changes-to-your-remote-repository) the following files:
+
+* all the files ending with `.rq`
+* `description.ttl` (see [part 3](#3-constructing-dublin-core-triples) of the assignment)
 
 ## 1 Querying the NC Gazetteer
 
@@ -64,5 +130,20 @@ Q. List the URI, name and number of swamps for all 100 counties in North Carolin
 
 ## 3 CONSTRUCTing Dublin Core triples
 
-R. For this question you will write a `CONSTRUCT` query that constructs new triples based on the triples in your `description.ttl` file from the previous assignment. The new triples will use properties from the [Dublin Core Metadata Initiative (DCMI) Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) instead of the properties you defined. Look at the DCMI Metadata Terms (specifically, the properties in the `/terms/` namespace), and find two or three properties that are similar in meaning to properties that you defined. Then write a `CONSTRUCT` query that constructs new triples using the DCMI properties.
+R. For this question you will write a `CONSTRUCT` query that constructs new triples based on the triples in your `description.ttl` file from the previous assignment. The new triples will use properties from the [Dublin Core Metadata Initiative (DCMI) Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) instead of the properties you defined. 
 
+Look at the DCMI Metadata Terms (specifically, the properties in the `/terms/` namespace), and find two or three properties that are similar in meaning to properties that you defined. Then write a `CONSTRUCT` query that constructs new triples using the DCMI properties.
+
+Next, add your `description.ttl` file to your assignment repository (just as you did for the previous assignment).
+
+Then run the query to get the results. Because this query produces results as Turtle rather than CSV, instead of running:
+
+```
+make R-actual.csv
+```
+
+… you should run:
+
+```
+make R-actual.ttl
+```
