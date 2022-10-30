@@ -116,17 +116,17 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
 
 Read about [how the the label service works](https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual#Label_service).
 
-L. List the URI and the name of every [stream](http://www.wikidata.org/entity/Q47521) in [Orange County](http://www.wikidata.org/entity/Q507957).
+L. List the URI and the English label of every [stream](http://www.wikidata.org/entity/Q47521) in [Orange County](http://www.wikidata.org/entity/Q507957). The list should be ordered alphabetically by label.
 
-M. List the URI and the name of every [watercourse](http://www.wikidata.org/entity/Q355304) in Orange County, along with the URI and the name of of the specific type of watercourse it is.
+M. List the URI and the English label of every [watercourse](http://www.wikidata.org/entity/Q355304) in Orange County, along with the URI and the English label of of the specific type of watercourse it is. The list should be ordered alphabetically by watercourse label.
 
-N. List the URI and the name of of every [swamp](http://www.wikidata.org/entity/Q166735) in [North Carolina](http://www.wikidata.org/entity/Q1454). (You should get over 500 results.)
+N. List the URI and the English label of of every [swamp](http://www.wikidata.org/entity/Q166735) in [North Carolina](http://www.wikidata.org/entity/Q1454). The list should be sorted alphabetically by label, then by URI.
 
-O. List the URI, name, elevation, and [coordinate location](http://www.wikidata.org/prop/direct/P625) of the ten swamps in North Carolina having the highest [elevation above sea level](http://www.wikidata.org/prop/direct/P2044). (Try switching to the map view after running your query—use the 👁 icon on left above your list of results in the Wikidata query interface.)
+O. List the URI, English label, elevation, and [coordinate location](http://www.wikidata.org/prop/direct/P625) of the ten swamps in North Carolina having the highest [elevation above sea level](http://www.wikidata.org/prop/direct/P2044). The list should be ordered by elevation from highest to lowest. (Try switching to the map view after running your query—use the 👁 icon on left above your list of results in the Wikidata query interface.)
 
-P. List the URI, name and number of swamps of every [county of North Carolina](http://www.wikidata.org/entity/Q13414758) having at least 50 swamps.
+P. List the URI, English label and number of swamps of every [county of North Carolina](http://www.wikidata.org/entity/Q13414758) having at least 50 swamps. The list should be ordered alphabetically by label.
 
-Q. List the URI, name and number of swamps for all 100 counties in North Carolina.
+Q. List the URI, English label and number of swamps for all 100 counties in North Carolina. The list should be ordered by number of swamps from most to least, then alphabetically by label.
 
 ## 3 CONSTRUCTing Dublin Core triples
 
