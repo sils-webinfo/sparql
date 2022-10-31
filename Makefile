@@ -38,7 +38,7 @@ R-actual.ttl: description.ttl R.rq
 	arq --data=$< --query=R.rq --results=ttl > $@
 
 %-actual.csv: %.rq %.valid | tools/jena/bin/rsparql
-	rsparql --query $< --service $(call service,$*) --results=CSV > $@
+	./tools/jena/bin/rsparql --query $< --service $(call service,$*) --results=CSV > $@
 
 R.correct: R-actual.ttl | tools/jena/bin/riot
 	./tools/jena/bin/riot --count $<
