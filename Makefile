@@ -23,6 +23,7 @@ superclean: clean
 skipped:
 	@echo $(SKIPPED)
 
+tools/jena/bin/arq \
 tools/jena/bin/qparse \
 tools/jena/bin/riot \
 tools/jena/bin/rsparql:
@@ -34,8 +35,8 @@ tools/jena/bin/rsparql:
 	./tools/jena/bin/qparse --query $<
 	touch $@
 
-R-actual.ttl: description.ttl R.rq
-	arq --data=$< --query=R.rq --results=ttl > $@
+R-actual.ttl: description.ttl R.rq | tools/jena/bin/arq
+	./tools/jena/bin/arq --data=$< --query=R.rq --results=ttl > $@
 
 %-actual.csv: %.rq %.valid | tools/jena/bin/rsparql
 	./tools/jena/bin/rsparql --query $< --service $(call service,$*) --results=CSV > $@
