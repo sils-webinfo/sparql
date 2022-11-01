@@ -10,7 +10,7 @@ CORRECT := $(addsuffix .correct,$(QUESTIONS))
 
 NG_QS := $(shell echo {A..K})
 WD_QS := $(shell echo {L..Q})
-NG := https://jena-fuseki.fly.dev/NCG/sparql
+NG := https://jena-fuseki.fly.dev/ncg/sparql
 WD := https://query.wikidata.org/sparql
 service = $(if $(filter $(NG_QS),$(1)),$(NG),$(WD))
 

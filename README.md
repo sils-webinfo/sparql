@@ -79,7 +79,7 @@ Finally, you should [commit](https://docs.github.com/en/codespaces/developing-in
 ## 1 Querying the NC Gazetteer
 
 For questions A–K, use the NC Gazetteer query interface:
-https://jena-fuseki.fly.dev/#/dataset/NCG/query
+https://jena-fuseki.fly.dev/#/dataset/ncg/query
 
 A. In the NC Gazetteer dataset, the predicate `skos:prefLabel` is used to associate place URIs and place names. What is the URI for the place named “Choggy Butte Mountain”? 
 
