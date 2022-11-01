@@ -1,5 +1,6 @@
 *-actual.*
 *.correct
+*.skipped
 *.valid
 submission.zip
 tools/jena/*
