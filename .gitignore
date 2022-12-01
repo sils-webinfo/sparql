@@ -5,4 +5,5 @@
 submission.zip
 tools/jena/*
 !tools/jena/Makefile
-answers
+/answers/
+/submissions/
