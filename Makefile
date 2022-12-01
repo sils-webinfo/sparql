@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
 
-.PHONY: clean superclean
+.PHONY: clean superclean copy check
 .DEFAULT_GOAL := submission.zip
 
 SKIPPED := $(subst .skipped,,$(shell ls *.skipped))
@@ -13,6 +13,8 @@ WD_QS := $(shell echo {L..Q})
 NG := https://jena-fuseki.fly.dev/ncg/sparql
 WD := https://query.wikidata.org/sparql
 service = $(if $(filter $(NG_QS),$(1)),$(NG),$(WD))
+
+.PRECIOUS: %.valid %-actual.csv
 
 clean:
 	rm -f *.valid *.correct *.skipped *-actual.csv submission.zip
@@ -71,3 +73,13 @@ endif
 	which zip || \
 	(sudo apt update && sudo apt -y install zip)
 	zip $@ $(QUERIES) description.ttl
+
+copy: clean
+	rm -f *.rq
+	cp -f submissions/$(WHO)/*.rq .
+	cp -f submissions/$(WHO)/description.ttl .
+
+check: $(CORRECT)
+	cat R.rq
+	echo
+	cat R-actual.ttl
