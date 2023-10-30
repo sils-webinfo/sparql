@@ -93,7 +93,7 @@ the following files:
 ## 1 Querying the NC Gazetteer
 
 For questions A–K, use the NC Gazetteer query interface:
-[[https://jena-fuseki.fly.dev/#/dataset/ncg/query]]
+<https://jena-fuseki.fly.dev/#/dataset/ncg/query>
 
 A. In the NC Gazetteer dataset, the predicate `skos:prefLabel` is used
 to associate place URIs and place names. What is the URI for the place
@@ -141,7 +141,7 @@ name, then by creek name.
 ## 2 Querying Wikidata
 
 For questions L–Q, use the Wikidata query interface:
-[[https://query.wikidata.org]]
+<https://query.wikidata.org>
 
 Remember that you’ll want to include the following clause in your
 query to get English-language labels for things:
