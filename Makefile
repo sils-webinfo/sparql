@@ -3,7 +3,7 @@ SHELL := /usr/bin/env bash
 .PHONY: clean superclean copy check
 .DEFAULT_GOAL := submission.zip
 
-SKIPPED := $(subst .skipped,,$(shell ls *.skipped))
+SKIPPED := $(subst .skipped,,$(shell ls *.skipped 2> /dev/null))
 QUESTIONS := $(filter-out $(SKIPPED),$(shell echo {A..R}))
 QUERIES := $(addsuffix .rq,$(QUESTIONS))
 CORRECT := $(addsuffix .correct,$(QUESTIONS))
