@@ -6,4 +6,5 @@ submission.zip
 tools/jena/*
 !tools/jena/Makefile
 /answers/
-/submissions/
+submissions
+grades.csv
